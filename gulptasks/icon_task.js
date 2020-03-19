@@ -6,7 +6,6 @@ module.exports = function (gulp, plugins, options) {
 	plugins.flatten = require('gulp-flatten');
 	plugins.exec = require("gulp-exec");
 	plugins.print = require("gulp-print").default;
-	plugins.ignore = require("gulp-ignore");
 	plugins.filter = require("gulp-filter");
 
 	gulp.task('vi_icons_clean', function () {
