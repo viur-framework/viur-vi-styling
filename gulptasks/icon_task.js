@@ -43,7 +43,7 @@ module.exports = function (gulp, plugins, options) {
 			.pipe(plugins.rename(function(path){
 				if (path.extname) {
 					if (path.dirname === '.') {
-						path.dirname = '';
+						path.dirname = 'icons';
 					}
 					path.basename = path.dirname + '-' + path.basename;
 					path.dirname = '';
@@ -78,7 +78,7 @@ module.exports = function (gulp, plugins, options) {
 			.pipe(plugins.rename(function(path){
 				if (path.extname) {
 					if (path.dirname === '.') {
-						path.dirname = '';
+						path.dirname = 'icons';
 					}
 					path.basename = path.dirname + '-' + path.basename;
 					path.dirname = '';
