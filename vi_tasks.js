@@ -57,7 +57,10 @@ gulp.task('vi_icons', loadTask('icon_task', {
 }));
 
 gulp.task('vi_images', loadTask('image_task', {
-	src: srcpaths.images,
+	src: [srcpaths.images,
+		 "images/**/*", //project images
+		 applicationFolder+"/vi_plugins/**/static/images/**/*" //vi_plugins
+		],
 	dest: destpaths.images
 }));
 

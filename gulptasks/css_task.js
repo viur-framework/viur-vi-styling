@@ -14,7 +14,7 @@ module.exports = function (gulp, plugins, options) {
 	return function () {
 		return gulp.src(options.src)
 			.pipe(plugins.less({
-				relativeUrls: true,
+				//relativeUrls: true, //destroys is-loading path
 				paths: [plugins.path.join(__dirname, 'less', 'includes')]
 			}))
 			.pipe(plugins.autoprefixer({
