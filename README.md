@@ -10,7 +10,7 @@ Base styling repository for viur-vi
 
 ## Needed depenencies
 <pre>
-npm install gulp gulp-load-plugins fs path gulp-less gulp-postcss postcss-zindex gulp-autoprefixer postcss-focus postcss-discard-comments gulp-cssnano gulp-join-media-queries gulp-rename gulp-sourcemaps gulp-babel gulp-concat gulp-uglify copy gulp-cheerio del gulp-imagemin gulp-flatten gulp-exec gulp-print gulp-filter gulp-uglify
+npm install @babel/core autoprefixer gulp-stylefmt gulp gulp-load-plugins fs path gulp-less gulp-postcss postcss-zindex gulp-autoprefixer postcss-focus postcss-discard-comments gulp-cssnano gulp-join-media-queries gulp-rename gulp-sourcemaps gulp-babel gulp-concat gulp-uglify copy gulp-cheerio del gulp-imagemin gulp-flatten gulp-exec gulp-print gulp-filter gulp-uglify
 </pre>
 most of them should be already installed if the project uses ignite with gulp
 

@@ -7,9 +7,12 @@ svgfile = """#-*- coding: utf-8 -*-
 
 embedsvg = {
 """
+projectfolder = "appengine"
+if not os.path.isdir( os.path.join(".","..", projectfolder)):
+	projectfolder = "deploy"
 
-basepath = os.path.join(".","..", "appengine","viur","vi")
-print(basepath)
+basepath = os.path.join(".","..", projectfolder,"viur","vi")
+#print(basepath)
 for dir in [os.path.join(basepath, "public","embedsvg")]:
 	try:
 		svgs = fnmatch.filter(os.listdir(dir), "*.svg")
@@ -24,7 +27,7 @@ svgfile+="}"
 try:
 	os.makedirs(basepath)
 except:pass
-print( os.path.abspath(basepath))
+#print( os.path.abspath(basepath))
 
 f = open(os.path.join(basepath,"embedsvg.py"),"w")
 f.write(svgfile)

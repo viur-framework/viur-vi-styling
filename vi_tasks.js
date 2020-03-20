@@ -12,11 +12,9 @@ const plugins = require('gulp-load-plugins');
 const fs = require('fs');
 
 let applicationFolder = "../appengine";
-fs.access(applicationFolder,function(error){
-	if(error){
-		let applicationFolder = "../deploy"
-	}
-});
+if (! fs.existsSync(applicationFolder)){
+	applicationFolder = "../deploy"
+}
 
 let srcpaths = {
 	images: './vi/images/**/*',
