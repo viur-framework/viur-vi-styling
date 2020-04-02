@@ -57,3 +57,32 @@
     margin-right: 20px;
   }
 }
+
+.vi-sb-filterselector{
+  .vi-sb-compoundfilter{
+    flex-direction: column;
+
+    .vi-sb-compoundfilter-header{
+      display: flex;
+      align-self: baseline;
+      width: 100%;
+      border-bottom: 1px solid #CCC;
+
+      .vi-sb-compoundfilter-name{
+        margin-left:10px;
+      }
+
+    }
+    &.is-active .vi-sb-compoundfilter-extended{
+      display: block;
+    }
+
+    .vi-sb-compoundfilter-extended{
+      display: none;
+      align-self: baseline;
+      width: 100%;
+      margin-left:0px;
+
+    }
+  }
+}

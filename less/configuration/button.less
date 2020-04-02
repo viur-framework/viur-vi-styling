@@ -58,9 +58,18 @@
     @btnShadowHover: 1);
 }
 
-.btn--add{
+.btn--add,
+.btn--activateselection{
   .invertColorizedBtn(
     @btnBackgroundColor: @successColor,
+    @btnBorderWidth: 1px,
+    @btnShadow: 0,
+    @btnShadowHover: 1);
+}
+
+.btn--close{
+  .colorizeBtn(
+    @btnBackgroundColor: @failColor,
     @btnBorderWidth: 1px,
     @btnShadow: 0,
     @btnShadowHover: 1);
