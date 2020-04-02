@@ -9,14 +9,14 @@ module.exports = function (gulp, plugins, options) {
 
 
 	//copy fonts
-	gulp.task('vi_editor_css',
+	gulp.task('vi_editor_fonts',
 		function (cb) {
 			return plugins.copy('./vi/htmleditor/font/*',options.dest,cb);
 		}
 	);
 
 	//concat css
-	gulp.task('vi_editor_fonts',
+	gulp.task('vi_editor_css',
 		function () {
 			return gulp.src([
 				"./vi/htmleditor/codemirror.css",
@@ -33,7 +33,7 @@ module.exports = function (gulp, plugins, options) {
 		function () {
 			return gulp.src(options.src)
 			.pipe(plugins.concat('htmleditor.min.js'))
-			.pipe(plugins.uglify())
+			//.pipe(plugins.uglify())
 			.pipe(gulp.dest(options.dest));
 		}
 	);

@@ -6,8 +6,9 @@ module.exports = function (gulp, plugins, options) {
 		plugins.del([options.dest + '/**/*',], {force: true});
 
 		return gulp.src(options.src)
+
 			.pipe(plugins.imagemin([
-				plugins.imagemin.jpegtran({progressive: true}),
+				plugins.imagemin.mozjpeg({progressive: true}),
 				plugins.imagemin.optipng({optimizationLevel: 5}),
 				plugins.imagemin.svgo({
 					plugins: [
@@ -16,6 +17,13 @@ module.exports = function (gulp, plugins, options) {
 					]
 				})
 			]))
+			.pipe(plugins.rename(function(path){
+				if (path.extname ) {
+					if (path.dirname==="custom/static/images"){
+						path.dirname = '';
+					}
+				}
+			}))
 			.pipe(gulp.dest(options.dest));
 	}
 };

@@ -20,7 +20,7 @@ module.exports = function (gulp, plugins, options) {
 			.pipe(plugins.filter(['**/*.svg','!*/logos/**','!*/**/logos/**'])) // alles außer logos
 			//.pipe(plugins.print())
 			.pipe(plugins.imagemin([
-				plugins.imagemin.jpegtran({progressive: true}),
+				plugins.imagemin.mozjpeg({progressive: true}),
 				plugins.imagemin.optipng({optimizationLevel: 5}),
 				plugins.imagemin.svgo({
 					plugins: [
@@ -60,7 +60,7 @@ module.exports = function (gulp, plugins, options) {
 			.pipe(plugins.filter(['embedsvg/logos/**','**/embedsvg/logos/**']))
 			//.pipe(plugins.print())
 			.pipe(plugins.imagemin([
-				plugins.imagemin.jpegtran({progressive: true}),
+				plugins.imagemin.mozjpeg({progressive: true}),
 				plugins.imagemin.optipng({optimizationLevel: 5}),
 				plugins.imagemin.svgo({
 					plugins: [
