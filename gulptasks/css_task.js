@@ -18,7 +18,6 @@ module.exports = function (gulp, plugins, options) {
 				paths: [plugins.path.join(__dirname, 'less', 'includes')]
 			}))
 			.pipe(plugins.autoprefixer({
-				browsers: ['last 2 versions'],
 				cascade: false
 			})) // add vendor prefixes
 			.pipe(plugins.postcss([
