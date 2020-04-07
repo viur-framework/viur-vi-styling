@@ -12,15 +12,15 @@ Base styling repository for viur-vi
 <pre>
 npm install @babel/core autoprefixer gulp-stylefmt gulp gulp-load-plugins fs path gulp-less gulp-postcss postcss-zindex gulp-autoprefixer postcss-focus postcss-discard-comments gulp-cssnano gulp-join-media-queries gulp-rename gulp-sourcemaps gulp-babel gulp-concat gulp-uglify copy gulp-cheerio del gulp-imagemin gulp-flatten gulp-exec gulp-print gulp-filter gulp-uglify
 </pre>
-most of them should be already installed if the project uses ignite with gulp
+most of these should be already installed if the project uses ignite with gulp
 
 ## Register as project Task
-at this line to gulpfile.js file  
+add this line to your gulpfile.js script
 `const viBuildTasks = require('./vi/vi_tasks');`
 
 ## Run gulp Tasks
 the main task can be triggered via `gulp vi`  
-you can run each single part of this script via:  
+you can run each part of this script individually via:  
  - `gulp vi_js`  
  - `gulp vi_editor`
  - `gulp vi_css`
@@ -34,8 +34,8 @@ you can run each single part of this script via:
 ├── deploy  
 │   ├── ..  
 │   ├── vi_plugins  
-│   │   ├── test_plugin         <-- each plugins has its own folder
-│   │   │   ├── static          <-- static folder for plugin / could contain embedsvg folder for icons
+│   │   ├── test_plugin         <-- each plugin has its own folder
+│   │   │   ├── static          <-- static folder for plugin / can also contain embedsvg folder for icons
 │   │   │   └── style.less      <-- vi_plugin less definitions
 │   │   ├── __init__.py         <-- vi plugins registration
 │   │   └── vi_custom.less      <-- less overrides / vi_plugin less imports
