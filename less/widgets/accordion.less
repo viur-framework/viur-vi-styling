@@ -77,7 +77,7 @@
     font-size: 1.5em;
     pointer-events: none;
   }
-  &-segment.is-active &-title .icon,
+  &-segment.is-active > &-legend > &-title .icon,
   &-segment:target &-title .icon {
     transform: rotate(90deg);
   }
@@ -90,7 +90,7 @@
     background: #fff;
     overflow: hidden;
   }
-  &-segment.is-active &-section,
+  &-segment.is-active > &-section,
   &-segment:target &-section {
     display: block;
   }
