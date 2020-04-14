@@ -1,3 +1,12 @@
+window.languagePluginUrl = "./pyodide/";
+
+/*** SW for large Pyodide files ***/
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/vi/s/sw.js');
+    });
+}
+
 /*** CHECK BROWSER COMPATIBLITY ***/
 
 /* We support Chrome, Firefox, Safari and MSIE >= 11 */
