@@ -73,8 +73,7 @@ gulp.task('vi', gulp.series([
 	'vi_editor',
 	'vi_js',
 	"vi_css",
-	"vi_icons",
-	"vi_images"
-
+	//"vi_icons",	//fixme: does not work!
+	//"vi_images"	//fixme: does not work!
 ]));
 
