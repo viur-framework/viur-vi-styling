@@ -9,7 +9,7 @@
   .btn(
     @btnBackgroundColor:#f8f8f8,
     @btnPadding: @defaultPadding,
-    @btnMargin: @defaultMargin,
+    @btnMargin: 0,
     @btnBorderWidth: 1px,
     @btnBorderRadius: 4px,
     @btnShadow: 0,
@@ -83,6 +83,7 @@
     @btnBorderWidth: 1px,
     @btnShadow: 0,
     @btnShadowHover: 1);
+  margin-left: @innerSpace;
 }
 
 /* Grey button, blue font, blue hover */
@@ -97,16 +98,18 @@
 
 .btn--lang {
   &.is-active {
-    border-bottom: 2px solid fadeOut(@textColor, 60%)!important;
-    &:before {
-      content: '';
-      border-style: solid;
-      border-width: 5px;
-      border-color: transparent transparent fadeOut(@textColor, 60%);
-      position: absolute;
-      bottom: 0;
-      transform: translateX(50%);
-    }
+    background-color: @successColor;
+    color: #fff;
+    //border-bottom: 2px solid fadeOut(@textColor, 60%)!important;
+    //&:before {
+    //  content: '';
+    //  border-style: solid;
+    //  border-width: 5px;
+    //  border-color: transparent transparent fadeOut(@textColor, 60%);
+    //  position: absolute;
+    //  bottom: 0;
+    //  transform: translateX(50%);
+    //}
   }
 }
 
@@ -124,4 +127,20 @@
     color: darken(@successColor,5%);
     border: @defaultBorderWidth solid lighten(@successColor, 5%);
   }
+}
+
+.btn--square{
+  .icon{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  &:after{
+    content: '';
+    display: table;
+    padding-bottom: 100%;
+  }
+}
+
+.vi-bone-dragger{
+  margin-right: @innerSpace;
 }

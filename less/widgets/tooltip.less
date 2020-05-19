@@ -5,10 +5,15 @@
 // .vi-tooltip-
 
 .vi-tooltip {
-  flex-basis: 100%;
-  margin-top: @innerSpace;
+  flex: 0;
+  margin: 0 0 0 @innerSpace;
   cursor: help;
   padding: 5px;
+
+  .msg-headline{
+    white-space: nowrap;
+  }
+
   &.msg .icon {
     height: 1.5em;
     width: 1.5em;

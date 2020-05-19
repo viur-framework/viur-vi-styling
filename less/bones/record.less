@@ -1,6 +1,22 @@
 @charset "UTF-8";
 /* RECORD */
 
+.vi-bone--record{
+  .vi-bone-widgets-item{
+    padding-bottom: @innerSpace;
+    border-bottom: 1px solid #e0e0e0;
+
+    &:last-child{
+      border-bottom: none;
+    }
+
+    &.is-dragging-over{
+      padding-top: 10px;
+      border-top: 1px solid @successColor;
+    }
+  }
+}
+
 .vi-bone--recordBone .recordbone{
   flex: 1 1 auto;
 

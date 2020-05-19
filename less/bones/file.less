@@ -6,10 +6,20 @@
     &-imagepreview {
       .basicInput(@padding:0, @margin:@defaultMargin, @borderRadius:@defaultBorderRadius, @borderWidth:@defaultBorderWidth, @borderColor:darken(@defaultInputColor,10%));
       background-color: #fafafa;
-      margin-right: 0;
-      margin-left: 10px;
-     /* width: 200px;
-      height: 200px;*/
+      margin: 0;
+      border-right: none;
+    }
+  }
+
+
+  .vi-bone--file{
+    align-items: stretch;
+    background-color: #fafafa;
+
+    .btn--select{
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border-left: none;
     }
   }
 }

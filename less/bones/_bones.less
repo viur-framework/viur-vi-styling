@@ -4,10 +4,18 @@
 .vi-bone {
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  * + & {
-    margin-top: @innerSpace;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: @innerSpace * 2;
+
+  .vi-bone{
+    margin-bottom: 0;
   }
+
+  &--color{
+    align-items: stretch;
+  }
+
   &-container {
     display: flex;
     flex-grow: 1;
@@ -42,6 +50,65 @@
     }
   }
 }
+
+.vi-bone-widgets{
+  min-height: 39px;
+  border: 1px solid #e0e0e0;
+  padding: @innerSpace @innerSpace 0 @innerSpace;
+}
+
+.vi-bone-widgets-item{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: @innerSpace;
+  transition: all ease .3s;
+}
+
+.vi-bone-multi-edit{
+  flex: 1;
+}
+
+.vi-bone-language{
+  flex: 1;
+
+}
+
+.vi-bone-widgets-item{
+  &.is-dragging-over{
+    padding-top: 10px;
+    border-top: 1px solid @successColor;
+  }
+}
+
+.vi-bone-actions{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: @innerSpace 0;
+}
+
+.vi-file-imagepreview{
+  border-style: inset;
+
+  .item-image{
+    width: 36px;
+    height: 36px;
+
+    i{
+      height: 100%;
+      width: 100%;
+
+      img{
+        margin-right: 0;
+        height: 100%;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+
+
 
 /* Bone imports */
 @import "file";
