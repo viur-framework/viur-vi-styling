@@ -320,7 +320,7 @@
     background-color: darken(@inputColor, 2%);
     color: contrast(darken(@inputColor, 2%), #000000, #ffffff);
     margin: 0;
-    padding: 5px 11.25px 6px 11.25px;
+    padding: 6px 10px 6px 10px;
     height: 39px;
 
     &-input {
@@ -673,8 +673,8 @@
 input[type="color"] {
 	-webkit-appearance: none;
 	border: none;
-	width: 2.3em;
-	height: 2.3em;
+	width: 39px;
+	height: 39px;
     padding: 0;
 
     &::-webkit-color-swatch-wrapper {
@@ -684,5 +684,10 @@ input[type="color"] {
     &::-webkit-color-swatch {
 	  border: none;
     }
+}
+
+.vi-select-wrap{
+  flex: 1;
+  display: flex;
 }
 

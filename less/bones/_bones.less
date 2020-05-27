@@ -8,7 +8,7 @@
   align-items: flex-start;
   margin-bottom: @innerSpace * 2;
 
-  .vi-bone{
+  & > .vi-bone{
     margin-bottom: 0;
   }
 
@@ -54,7 +54,11 @@
 .vi-bone-widgets{
   min-height: 39px;
   border: 1px solid #e0e0e0;
-  padding: @innerSpace @innerSpace 0 @innerSpace;
+  padding: @innerSpace;
+
+  .vi-bone{
+    margin-bottom: 0;
+  }
 }
 
 .vi-bone-widgets-item{
@@ -107,6 +111,22 @@
   }
 }
 
+.vi-bone-inner{
+  margin-bottom: 0;
+
+  &.vi-bone--relational{
+    min-height: 39px;
+    border: 1px solid #e0e0e0;
+    padding: @innerSpace;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .vi-bone-widgets & {
+    border: none;
+    padding: 0;
+  }
+}
 
 
 
