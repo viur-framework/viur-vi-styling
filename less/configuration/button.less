@@ -5,16 +5,19 @@
 // .btn-
 // .btnGroup
 
+@btn-borderRadius: 4px;
+
 .btn {
-  .btn(
-    @btnBackgroundColor:#f8f8f8,
-    @btnPadding: @defaultPadding,
-    @btnMargin: 0,
-    @btnBorderWidth: 1px,
-    @btnBorderRadius: 4px,
-    @btnShadow: 0,
-    @btnShadowHover: 0,
-    @btnShadowColor: @defaultShadowColor);
+  .genericBtn(
+    @backgroundColor:#f8f8f8,
+    @padding: @defaultPadding,
+    @margin: @defaultMargin,
+    @borderWidth: @defaultBorderWidth,
+    @borderRadius: @btn-borderRadius,
+    @shadow: 0,
+    @shadowHover: 0,
+    @shadowColor: @defaultShadowColor,
+    @fontWeight: @fontWeightNormal );
     &.is-busy,
     &.is-loading,
     &[aria-busy=true] {
@@ -42,47 +45,47 @@
 /* Red button, white font */
 .btn--viur {
   .colorizeBtn(
-    @btnBackgroundColor: @mainColor,
-    @btnBorderWidth: 1px,
-    @btnShadow: 0,
-    @btnShadowHover: 1);
+    @backgroundColor: @mainColor,
+    @borderWidth: 1px,
+    @shadow: 0,
+    @shadowHover: 1);
 }
 
 /* Green button, white font */
 .btn--primary,
 .btn--lang.is-filled {
   .colorizeBtn(
-    @btnBackgroundColor: @successColor,
-    @btnBorderWidth: 1px,
-    @btnShadow: 0,
-    @btnShadowHover: 1);
+    @backgroundColor: @successColor,
+    @borderWidth: 1px,
+    @shadow: 0,
+    @shadowHover: 1);
 }
 
 .btn--add,
 .btn--activateselection{
   .invertColorizedBtn(
-    @btnBackgroundColor: @successColor,
-    @btnBorderWidth: 1px,
-    @btnShadow: 0,
-    @btnShadowHover: 1);
+    @backgroundColor: @successColor,
+    @borderWidth: 1px,
+    @shadow: 0,
+    @shadowHover: 1);
 }
 
 .btn--close{
   .colorizeBtn(
-    @btnBackgroundColor: @failColor,
-    @btnBorderWidth: 1px,
-    @btnShadow: 0,
-    @btnShadowHover: 1);
+    @backgroundColor: @failColor,
+    @borderWidth: 1px,
+    @shadow: 0,
+    @shadowHover: 1);
 }
 
 /* Grey button, red font, red hover */
 .btn--danger,
 .btn--delete {
   .invertColorizedBtn(
-    @btnBackgroundColor: @failColor,
-    @btnBorderWidth: 1px,
-    @btnShadow: 0,
-    @btnShadowHover: 1);
+    @backgroundColor: @failColor,
+    @borderWidth: 1px,
+    @shadow: 0,
+    @shadowHover: 1);
   margin-left: @innerSpace;
 }
 
@@ -90,10 +93,10 @@
 .btn--download,
 .btn--edit {
   .invertColorizedBtn(
-    @btnBackgroundColor: @hintColor,
-    @btnBorderWidth: 1px,
-    @btnShadow: 0,
-    @btnShadowHover: 1);
+    @backgroundColor: @hintColor,
+    @borderWidth: 1px,
+    @shadow: 0,
+    @shadowHover: 1);
 }
 
 .btn--lang {
@@ -141,8 +144,4 @@
     display: table;
     padding-bottom: 100%;
   }
-}
-
-.vi-bone-dragger{
-  margin-right: @innerSpace;
 }

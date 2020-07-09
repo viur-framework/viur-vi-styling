@@ -4,27 +4,35 @@
 // Prefixes and objects:
 // .icon
 
-.i {
+@icon-backgroundColor: @mainColor;
+@icon-borderRadius: @defaultBorderRadius;
+@icon-fontWeight: @fontWeightBold;
+
+.i(
+  @backgroundColor:@icon-backgroundColor,
+  @borderRadius:@icon-borderRadius,
+  @fontWeight:@icon-fontWeight
+  ) {
   height: 2em;
   width: 2em;
   line-height: 2;
-  background-color: @complementColor;
-  color: contrast(@complementColor);
-  border-radius: .4em;
+  background-color: @backgroundColor;
+  color: contrast(@backgroundColor);
+  border-radius: @borderRadius;
   text-align: center;
   font-style: unset;
-  font-weight: @fontWeightBold;
+  font-weight: @fontWeight;
   font-size: 1.2em;
   align-self: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   & svg,
   & img,
   & .icon {
     width: 100%;
     height: 100%;
-    border-radius: @defaultBorderRadius;
   }
   &.is-loading {
     .icon {
