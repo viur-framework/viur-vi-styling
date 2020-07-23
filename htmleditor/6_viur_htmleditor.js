@@ -21,11 +21,14 @@ function summernoteEditor(input, lang) {
 				$editable.find('span[style]').contents().unwrap();
 			},
 			// clean html/css crud out of copied text before pasting
+			/*
 			onPaste: function (e) {
 				var bufferText = ((e.originalEvent || e).clipboardData || window.clipboardData).getData('Text');
 				e.preventDefault();
 				$(input).summernote('insertText', bufferText);
 			}
+			
+			 */
 		},
 		lang: lang,
 		toolbar: [
