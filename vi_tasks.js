@@ -18,7 +18,6 @@ if (! fs.existsSync(applicationFolder)){
 
 let srcpaths = {
 	images: './vi/images/**/*',
-	embedsvg: './vi/embedsvg/**/*',
 	editor: './vi/htmleditor/**/*.js',
 	js: './vi/js/**/*.js',
 };
@@ -26,7 +25,7 @@ let srcpaths = {
 let destpaths = {
 	css: applicationFolder+'/viur/vi/public/css',
 	images: applicationFolder+'/viur/vi/public/images',
-	embedsvg: applicationFolder+'/viur/vi/public/embedsvg',
+	embedsvg: applicationFolder+'/viur/vi/public/svgs',
 	editor: applicationFolder+'/viur/vi/public/htmleditor',
 	js: applicationFolder+'/viur/vi/public/js',
 };
