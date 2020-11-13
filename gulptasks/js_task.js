@@ -4,7 +4,7 @@ module.exports = function (gulp, plugins, options) {
 	plugins.babel = require('gulp-babel');
 	plugins.concat = require('gulp-concat');
 	plugins.uglify = require('gulp-uglify');
-	plugins.nano = require('gulp-cssnano');
+	plugins.nano = require('gulp-clean-css');
 	plugins.copy = require('copy');
 
 	return function () {

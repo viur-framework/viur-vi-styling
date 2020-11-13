@@ -7,7 +7,7 @@ module.exports = function (gulp, plugins, options) {
 	plugins.autoprefixer = require('gulp-autoprefixer');
 	plugins.focus = require('postcss-focus');
 	plugins.nocomments = require('postcss-discard-comments');
-	plugins.nano = require('gulp-cssnano');
+	plugins.nano = require('gulp-clean-css');
 	plugins.jmq = require('gulp-join-media-queries');
 	plugins.rename = require('gulp-rename')
 
