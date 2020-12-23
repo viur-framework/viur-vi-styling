@@ -58,14 +58,14 @@
 
   &-segment.is-incomplete:target &-title,
   &-segment.is-incomplete &-title {
-    background-color: @hintColor;
-    border-color: darken(@hintColor, 10%);
+    background-color: @failColor;
+    border-color: darken(@failColor, 10%);
     color: #fff;
   }
   &-segment.is-incomplete:not(.is-disabled):hover &-title,
   &-segment.is-incomplete.is-active &-title {
-    background-color: lighten(@hintColor, 10%);
-    border-color: @hintColor;
+    background-color: lighten(@failColor, 10%);
+    border-color: @failColor;
   }
 
   /* Arrow before Title */
